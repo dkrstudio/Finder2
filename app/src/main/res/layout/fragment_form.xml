@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.ui.main.form.FormFragment">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical" android:padding="16px">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="8dp"
+                           android:background="@android:drawable/presence_audio_away"
+                           android:id="@+id/view_button_voice_title"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:hint="@string/hint_title" android:id="@+id/edit_text_title"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="8dp"
+                           android:background="@android:drawable/presence_audio_away"
+                           android:id="@+id/view_button_voice_description"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:hint="@string/hint_title" android:id="@+id/edit_text_description"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:visibility="visible">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="8dp"
+                           android:background="@android:drawable/presence_audio_away"
+                           android:id="@+id/view_button_voice_location"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:hint="@string/hint_location" android:id="@+id/edit_text_location"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_address"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/map"
+                    tools:context=".ui.activity.ui.main.form.FormFragment"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical"
+                  android:layout_gravity="bottom|end"
+                  android:layout_margin="@dimen/fab_margin">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/view_fab_current_location"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_dialog_email" app:fabSize="mini" android:layout_gravity="right"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/view_fab_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_dialog_email"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_remove"
+          android:title="@string/action_remove"
+          android:orderInCategory="100"
+          android:icon="@drawable/baseline_delete_black_18dp"
+          app:showAsAction="always" android:visible="true" android:checkable="false" android:enabled="true"/>
+    <item android:id="@+id/action_save"
+          android:title="@string/action_save"
+          android:orderInCategory="100"
+          android:icon="@drawable/baseline_save_black_18dp"
+          app:showAsAction="always" android:visible="true" android:checkable="false" android:enabled="true"/>
+</menu>

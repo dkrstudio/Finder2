@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.my_place.MyPlaceActivity">
+
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="8dp"
+                           android:background="@drawable/baseline_settings_voice_black_18dp"
+                           android:id="@+id/view_button_voice_title" android:contentDescription="@string/todo"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:hint="@string/hint_title" android:id="@+id/edit_text_title"
+                          android:maxLines="1" android:inputType="text" android:autofillHints=""/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="8dp"
+                           android:background="@drawable/baseline_settings_voice_black_18dp"
+                           android:id="@+id/view_button_voice_description" android:contentDescription="TODO"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:hint="@string/hint_description" android:id="@+id/edit_text_description"
+                          android:maxLines="3" android:autofillHints="" android:inputType="text"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="8dp"
+                       android:background="@drawable/baseline_settings_voice_black_18dp"
+                       android:id="@+id/view_button_voice_location" android:contentDescription="TODO"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:maxLines="1" android:inputType="text"
+                          android:hint="@string/hint_location" android:id="@+id/edit_text_location"
+                          android:layout_gravity="left" android:autofillHints=""/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:orientation="horizontal" android:layout_gravity="right"
+                              android:layout_alignRight="@id/edit_text_location"
+                              android:layout_marginStart="8dp"
+                              android:layout_marginEnd="8dp" android:layout_margin="8dp"
+                              android:layout_alignEnd="@id/edit_text_location">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                               android:background="@drawable/baseline_image_search_black_18dp"
+                               android:id="@+id/view_button_find_location"
+                               android:contentDescription="@string/todo"/>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                               android:background="@drawable/baseline_list_black_18dp"
+                               android:id="@+id/view_button_show_list" android:layout_marginLeft="8dp"
+                               android:visibility="gone" android:layout_marginStart="8dp"
+                               android:contentDescription="@string/todo"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:id="@+id/view_public" android:paddingTop="2dp"
+                      android:paddingBottom="2dp">
+            <CheckBox android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:text="@string/is_public" android:id="@+id/view_is_public"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+                      android:layout_height="match_parent" android:minHeight="380dp"
+        >
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="380dp"
+                    android:id="@+id/map"
+                    tools:context=".ui.activity.my_place.MyPlaceActivity"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

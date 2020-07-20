@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@id/nav_signIn">
+
+    <fragment
+            android:id="@+id/nav_home"
+            android:name="com.finder.application.ui.activity.ui.main.home.HomeFragment"
+            android:label="@string/menu_home"
+            tools:layout="@layout/fragment_home">
+
+        <action
+                android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+                app:destination="@id/nav_home_second"/>
+        <action android:id="@+id/action_HomeFragment_to_FormFragment" app:destination="@id/nav_form">
+            <argument android:name="id" app:argType="integer" android:defaultValue="0"/>
+        </action>
+    </fragment>
+    <fragment
+            android:id="@+id/nav_home_second"
+            android:name="com.finder.application.ui.activity.ui.main.home.HomeSecondFragment"
+            android:label="@string/home_second"
+            tools:layout="@layout/fragment_home_second">
+        <action
+                android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+                app:destination="@id/nav_home"/>
+
+        <argument
+                android:name="myArg"
+                app:argType="string"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_gallery"
+            android:name="com.finder.application.ui.activity.ui.main.gallery.GalleryFragment"
+            android:label="@string/menu_gallery"
+            tools:layout="@layout/fragment_gallery">
+        <action android:id="@+id/action_ListItem_to_FormFragment" app:destination="@id/nav_form">
+            <argument android:name="id" app:argType="integer" android:defaultValue="0"/>
+        </action>
+    </fragment>
+
+    <fragment
+            android:id="@+id/nav_slideshow"
+            android:name="com.finder.application.ui.activity.ui.main.slideshow.SlideshowFragment"
+            android:label="@string/menu_slideshow"
+            tools:layout="@layout/fragment_slideshow"/>
+
+    <fragment android:id="@+id/nav_form"
+              android:name="com.finder.application.ui.activity.ui.main.form.FormFragment"
+              android:label="@string/form"
+              tools:layout="@layout/fragment_form">
+        <action android:id="@+id/action_FromFragment_to_HomeFragment" app:destination="@id/nav_home"/>
+    </fragment>
+    <fragment android:id="@+id/nav_signIn" android:name="com.finder.application.ui.fragment.sign_in.SignInFragment"
+              android:label="fragment_sign_in" tools:layout="@layout/fragment_sign_in">
+        <action android:id="@+id/action_SignInFragment_to_HomeFragment" app:destination="@id/nav_home"/>
+    </fragment>
+</navigation>

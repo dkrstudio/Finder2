@@ -1,0 +1,63 @@
+<resources>
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyBMp1COOoiUuemgDGCtOs4g-efClKYMhrM
+    </string>
+
+    <string name="app_name">Finder</string>
+    <string name="continue_not_logined">Продолжить</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">ActivityMain</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_gallery_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="hello_slideshow_second">Hello HomeSecondFragment. Arg: %1$s</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="form">Form</string>
+    <string name="hint_title">Название</string>
+    <string name="hint_description">Описание</string>
+    <string name="hint_location">Локация</string>
+    <string name="current_location">CurrentLocation</string>
+    <string name="select_location">Выбирете локацию</string>
+    <string name="open_map">Open map</string>
+    <string name="find_address">Find address</string>
+    <string name="search">Search</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="server_client_id">590875488594-3kib29shc62vprjhf7vo7h8e6fmi40eo.apps.googleusercontent.com</string>
+    <string name="sign_in">Войти</string>
+    <string name="add_place">Добавить место</string>
+    <string name="my_place">Мои места</string>
+    <string name="cancel">Отмена</string>
+    <string name="todo">TODO</string>
+    <string name="set_address">Укажите адрес</string>
+    <string name="not_results">Нет результатов</string>
+    <string name="action_save">Сохранить</string>
+    <string name="action_remove">Удалить</string>
+    <string name="title">Название</string>
+    <string name="location">Локация</string>
+    <string name="is_public">Публиковать</string>
+    <string name="close">Закрыть</string>
+    <string name="label_description">Описание:</string>
+    <string name="move_to">Перейти</string>
+    <string name="place">Место</string>
+
+    <string name="title_activity_access">ActivityAccess</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="access_find_location">Разрешить использовать данные о местонахождении</string>
+    <!--    <string name="server_client_id">590875488594-7a9ji9j2lojoen9fob231m2fn2folkkq.apps.googleusercontent.com</string>-->
+</resources>
